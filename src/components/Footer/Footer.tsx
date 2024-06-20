@@ -3,7 +3,6 @@ import {
   FaLinkedinIn,
   FaInstagram,
   FaGithub,
-  FaAngleDown,
 } from "react-icons/fa6";
 
 const Footer = () => {

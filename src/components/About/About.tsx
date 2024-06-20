@@ -12,15 +12,6 @@ const MLeft = {
   hidden: { opacity: 0, x: -50 },
 };
 
-const MRight = {
-  visible: (i: number) => ({
-    opacity: 1,
-    x: 0,
-    transition: { delay: i * 0.3 },
-  }),
-  hidden: { opacity: 0, x: 70 },
-};
-
 const MUp = {
   visible: (i: number) => ({
     opacity: 1,
