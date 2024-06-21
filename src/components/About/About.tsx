@@ -72,22 +72,40 @@ const About = () => {
           </motion.p>
 
           <div className="about__info">
-            <motion.div custom={2} variants={MUp} initial="hidden" whileInView='visible' viewport={{once: true, amount: .8}}>
+            <motion.div
+              custom={2}
+              variants={MUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.8 }}
+            >
               <span className="about__info-title">1</span>
               <span className="about__info-name">
                 Year <br /> experience
               </span>
             </motion.div>
 
-            <motion.div custom={2.3} variants={MUp} initial="hidden" whileInView='visible' viewport={{once: true, amount: .8}}>
-              <span className="about__info-title">6</span>
+            <motion.div
+              custom={2.3}
+              variants={MUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <span className="about__info-title">2</span>
               <span className="about__info-name">
                 Completed <br /> project
               </span>
             </motion.div>
 
-            <motion.div custom={2.6} variants={MUp} initial="hidden" whileInView='visible' viewport={{once: true, amount: .8}}>
-              <span className="about__info-title">0</span>
+            <motion.div
+              custom={2.6}
+              variants={MUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <span className="about__info-title">1</span>
               <span className="about__info-name">
                 Companies <br /> worked
               </span>
@@ -96,7 +114,7 @@ const About = () => {
 
           <div className="about__buttons">
             <motion.a
-              custom={1}
+              custom={2.6}
               variants={MUp}
               initial="hidden"
               whileInView="visible"

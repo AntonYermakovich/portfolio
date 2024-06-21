@@ -1,5 +1,6 @@
 import { Element } from "react-scroll";
 import { FaCode, FaArrowRight } from "react-icons/fa6";
+import { IoServerOutline } from "react-icons/io5";
 import { CiGrid42 } from "react-icons/ci";
 import ServiceContent from "./ServiceContent/ServiceContent";
 import { useState } from "react";
@@ -67,7 +68,7 @@ const Service = () => {
           openModal={openModal2}
         >
           <div>
-            <FaCode className="services__icon" />
+            <IoServerOutline className="services__icon" />
             <h3 className="services__title">Backend Developer</h3>
           </div>
           <span
