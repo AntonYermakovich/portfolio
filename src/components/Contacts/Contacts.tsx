@@ -9,10 +9,6 @@ import { motion } from "framer-motion";
 import Modal from "../Modal/Modal";
 import { useEffect, useState } from "react";
 
-const TG_BOT_TOKEN: string = "7236986266:AAGOApaeNBVR9kx3U_ZpdKobPyNQAtsvaos";
-const TG_CHAT_ID: string = "@AY_FRONT";
-const API: string = `https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`;
-
 const MUp = {
   visible: (i: number) => ({
     opacity: 1,
@@ -35,23 +31,8 @@ const Contacts = () => {
     const text = `Заявка от: ${data.name}\nEmail: ${data.email}\nНазвание проекта: ${data.project}\nСообщение: ${data.message}`;
 
     try {
-      const response = await fetch(API, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          chat_id: TG_CHAT_ID,
-          text,
-        }),
-      });
-
-      if (response.ok) {
-        setShowModal((prev) => !prev);
-        reset();
-      } else {
-        throw new Error(response.statusText);
-      }
+      console.log(text);
+      reset();
     } catch (error) {
       console.log(error);
       console.log("Упс...Что-то пошло не так. Попробуйте позже.");
