@@ -1,11 +1,11 @@
 # Portfolio project
 
-To go [click here](https://portfolio-antonyermakovichs-projects.vercel.app/)
+## The project can be viewed [here](https://portfolio-antonyermakovichs-projects.vercel.app/)
 
-## Technologies:
+#### Technologies
 
 - React
 - React-hook-form
-- React-icons
 - React-scroll
-- Framer-motion
+- React-icons
+- Framer-morion

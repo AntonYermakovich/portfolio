@@ -1,6 +1,4 @@
 import { Element } from "react-scroll";
-import Porfolio2 from "../../assets/img/portfolio2.jpg";
-import Porfolio3 from "../../assets/img/portfolio3.jpg";
 import langBao from "../../assets/img/langbao.png";
 import simpleMotors from "../../assets/img/simplemotors.jpg";
 import { FaArrowRight } from "react-icons/fa6";
