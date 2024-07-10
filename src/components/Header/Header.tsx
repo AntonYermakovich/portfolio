@@ -27,7 +27,7 @@ const Header = () => {
     <header className={`header ${showShadow ? 'scroll-header' : ''}`} id="header">
       <nav className="nav container">
         <p className="nav__logo">
-          Anton
+          Portfolio
         </p>
 
         <MenuList open={openMenu} setOpenMenu={setOpenMenu} />

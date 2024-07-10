@@ -149,7 +149,7 @@ const Hero = () => {
             duration={500}
             className="home__scroll-button button--flex"
           >
-            <BsMouse className="home__scroll-mouse" />
+            <div className="home__scroll-mouse" />
             <span className="home__scroll-name">Scroll down</span>
             <FaAngleDown className="home__scroll-arrow" />
           </Link>
