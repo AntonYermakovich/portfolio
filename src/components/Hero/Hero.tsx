@@ -6,7 +6,6 @@ import {
   FaAngleDown,
 } from "react-icons/fa6";
 import { HiOutlinePaperAirplane } from "react-icons/hi2";
-import { BsMouse } from "react-icons/bs";
 import Perfil from "../../assets/img/perfil.png";
 import { motion } from "framer-motion";
 
