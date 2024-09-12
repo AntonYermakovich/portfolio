@@ -1,6 +1,7 @@
 import { Element } from "react-scroll";
 import langBao from "../../assets/img/langbao.png";
 import simpleMotors from "../../assets/img/simplemotors.jpg";
+import techvortex from "../../assets/img/techvortext.png";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
@@ -88,6 +89,35 @@ const Portfolio = () => {
             <div>
               <a
                 href="https://simple-motors.ru"
+                target="_blank"
+                className="button button--flex button--small portfolio__button"
+              >
+                Demo
+                <FaArrowRight className="button__icon" />
+              </a>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          variants={MUp}
+          viewport={{ once: true }}
+          initial="hidden"
+          whileInView="visible"
+          custom={0.6}
+          className="portfolio__content grid slider-slide"
+        >
+          <img src={techvortex} alt="Image" className="portfolio__img" />
+
+          <div className="portfolio__data">
+            <h3 className="portfolio__title">TechVortex</h3>
+            <span className="portfolio__description">
+              Мы специализируемся на разработке программного обеспечения любой
+              сложности.
+            </span>
+            <div>
+              <a
+                href="https://technovertex.ru/"
                 target="_blank"
                 className="button button--flex button--small portfolio__button"
               >
