@@ -92,7 +92,7 @@ const About = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.8 }}
             >
-              <span className="about__info-title">2</span>
+              <span className="about__info-title">3</span>
               <span className="about__info-name">
                 Completed <br /> project
               </span>

@@ -2,8 +2,33 @@ import { Element } from "react-scroll";
 import langBao from "../../assets/img/langbao.png";
 import simpleMotors from "../../assets/img/simplemotors.jpg";
 import techvortex from "../../assets/img/techvortext.png";
-import { FaArrowRight } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import Project from "../Project/Project";
+import { TProject } from "../../types";
+
+const projects:TProject[] = [
+  {
+    id: 1,
+    title: "Lang bao",
+    description: "Лангбао - инновационный завод по производству бытовой химии на территории материкового Китая.",
+    img: langBao,
+    link: "https://lang-bao.com"
+  },
+  {
+    id: 2,
+    title: "Simple Motors",
+    description: "Мы предлагаем высококачественные детали Европейского и Японского производства.",
+    img: simpleMotors,
+    link: "https://simple-motors.ru"
+  },
+  {
+    id: 3,
+    title: "TechVortex",
+    description: "Мы специализируемся на разработке программного обеспечения любой сложности.",
+    img: techvortex,
+    link: "https://technovertex.ru/"
+  }
+]
 
 const MUp = {
   visible: (i: number) => ({
@@ -39,100 +64,7 @@ const Portfolio = () => {
       </motion.span>
 
       <div className="container">
-        <motion.div
-          variants={MUp}
-          viewport={{ once: true }}
-          initial="hidden"
-          whileInView="visible"
-          custom={0.3}
-          className="portfolio__content grid"
-        >
-          <div className="portfolio__img">
-            <img src={langBao} alt="Image" />
-          </div>
-
-          <div className="portfolio__data">
-            <h3 className="portfolio__title">Lang bao</h3>
-            <span className="portfolio__description">
-              Лангбао - инновационный завод по производству бытовой химии на
-              территории материкового Китая.
-            </span>
-            <div>
-              <a
-                href="https://lang-bao.com/"
-                target="_blank"
-                className="button button--flex button--small portfolio__button"
-              >
-                Demo
-                <FaArrowRight className="button__icon" />
-              </a>
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          variants={MUp}
-          viewport={{ once: true }}
-          initial="hidden"
-          whileInView="visible"
-          custom={0.6}
-          className="portfolio__content grid slider-slide"
-        >
-          <img src={simpleMotors} alt="Image" className="portfolio__img" />
-
-          <div className="portfolio__data">
-            <h3 className="portfolio__title">Simple Motors</h3>
-            <span className="portfolio__description">
-              Мы предлагаем высококачественные детали Европейского и Японского
-              производства на выгодных условиях сотрудничества.
-            </span>
-            <div>
-              <a
-                href="https://simple-motors.ru"
-                target="_blank"
-                className="button button--flex button--small portfolio__button"
-              >
-                Demo
-                <FaArrowRight className="button__icon" />
-              </a>
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          variants={MUp}
-          viewport={{ once: true }}
-          initial="hidden"
-          whileInView="visible"
-          custom={0.6}
-          className="portfolio__content grid slider-slide"
-        >
-          <img src={techvortex} alt="Image" className="portfolio__img" />
-
-          <div className="portfolio__data">
-            <h3 className="portfolio__title">TechVortex</h3>
-            <span className="portfolio__description">
-              Мы специализируемся на разработке программного обеспечения любой
-              сложности.
-            </span>
-            <div>
-              <a
-                href="https://technovertex.ru/"
-                target="_blank"
-                className="button button--flex button--small portfolio__button"
-              >
-                Demo
-                <FaArrowRight className="button__icon" />
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
-      <div className="portfolio__slider">
-        <div className="portfolio__container container slider-container">
-          <div className="slider-wrapper"></div>
-        </div>
+        {projects.map(project => <Project key={project.id} {...project} />)}
       </div>
     </Element>
   );

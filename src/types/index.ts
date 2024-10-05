@@ -40,3 +40,11 @@ export type TModal = {
   show: boolean
   setShow: (prev:boolean) => void
 }
+
+export type TProject = {
+  id: number,
+  title: string,
+  description: string,
+  link: string,
+  img: string
+}
