@@ -36,7 +36,7 @@ const Hero = () => {
             variants={MLeft}
             initial="hidden"
             whileInView="visible"
-            viewport={{once: true}}
+            viewport={{ once: true }}
             className="home__social"
           >
             <motion.a
@@ -75,7 +75,7 @@ const Hero = () => {
             initial="hidden"
             whileInView="visible"
             variants={MUp}
-            viewport={{once: true}}
+            viewport={{ once: true }}
             className="home__img"
           >
             <svg
@@ -108,7 +108,7 @@ const Hero = () => {
             variants={MUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{once: true}}
+            viewport={{ once: true }}
             className="home__data"
           >
             <motion.h1 custom={1} variants={MUp} className="home__title">

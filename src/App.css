@@ -169,23 +169,6 @@ img {
   transition: 0.15s;
 }
 
-.header__lang {
-  display: flex;
-  gap: 10px;
-  margin-right: 20px;
-}
-
-.lang {
-  font-size: var(--small-font-size);
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-  cursor: pointer;
-}
-
-.lang_active {
-  color: var(--first-color);
-}
-
 .nav {
   max-width: 968px;
   height: var(--header-height);

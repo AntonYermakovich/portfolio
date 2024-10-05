@@ -1,51 +1,52 @@
 import MenuList from "../MenuList/MenuList";
 import { GrAppsRounded } from "react-icons/gr";
-import { FaMoon  } from "react-icons/fa6";
+import { FaMoon } from "react-icons/fa6";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { useEffect, useState } from "react";
 
-
 const Header = () => {
-  const [openMenu, setOpenMenu] = useState<boolean>(false)
-  const [showShadow, setShowShadow] = useState<boolean>(false)
-  const [modeDark, setModeDark] = useState<boolean>(false)
-  const [langSelected, setLangSelected] = useState<string>('en')
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const [showShadow, setShowShadow] = useState<boolean>(false);
+  const [modeDark, setModeDark] = useState<boolean>(false);
 
   const changeModeHandler = () => {
-    setModeDark(!modeDark)
-    const body = document.querySelector('body')
+    setModeDark(!modeDark);
+    const body = document.querySelector("body");
 
-    body?.classList.contains('dark-theme') 
-      ? body?.classList.remove('dark-theme')
-      : body?.classList.add('dark-theme')
-  }
+    body?.classList.contains("dark-theme")
+      ? body?.classList.remove("dark-theme")
+      : body?.classList.add("dark-theme");
+  };
 
   useEffect(() => {
-    window.addEventListener('scroll', () => setShowShadow(window.scrollY > 50 ? true : false))
-  }, [])
+    window.addEventListener("scroll", () =>
+      setShowShadow(window.scrollY > 50 ? true : false)
+    );
+  }, []);
 
   return (
-    <header className={`header ${showShadow ? 'scroll-header' : ''}`} id="header">
+    <header
+      className={`header ${showShadow ? "scroll-header" : ""}`}
+      id="header"
+    >
       <nav className="nav container">
-        <p className="nav__logo">
-          Portfolio
-        </p>
+        <p className="nav__logo">Portfolio</p>
 
         <MenuList open={openMenu} setOpenMenu={setOpenMenu} />
 
-
-
         <div className="nav__btns">
-          <div className="header__lang">
-            <p onClick={() => setLangSelected('en')} className={`lang lang-en ${langSelected.toLowerCase() === 'en' ? 'lang_active' : ""}`}>En</p>
-            <p onClick={() => setLangSelected('ru')} className={`lang lang-en ${langSelected.toLowerCase() === 'ru' ? 'lang_active' : ""}`}>Ru</p>
-          </div>
-          {modeDark && <MdOutlineWbSunny onClick={changeModeHandler} className="change-theme" />}
-          {!modeDark && <FaMoon onClick={changeModeHandler} className="change-theme" />}
-
+          {modeDark && (
+            <MdOutlineWbSunny
+              onClick={changeModeHandler}
+              className="change-theme"
+            />
+          )}
+          {!modeDark && (
+            <FaMoon onClick={changeModeHandler} className="change-theme" />
+          )}
 
           <div className="nav__toggle" id="nav-toggle">
-            <GrAppsRounded onClick={() => setOpenMenu(prev => !prev)} />
+            <GrAppsRounded onClick={() => setOpenMenu((prev) => !prev)} />
           </div>
         </div>
       </nav>

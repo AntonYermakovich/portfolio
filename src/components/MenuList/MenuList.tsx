@@ -11,8 +11,6 @@ const menu = [
   {link: 'contacts', label: 'Contacts'},
 ]
 
-
-
 const MenuList = ({open, setOpenMenu}:TMenuList) => {
   return (
     <div className={`nav__menu ${open ? 'show-menu' : ''}`} id="nav-menu">
